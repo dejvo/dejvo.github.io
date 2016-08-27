@@ -51,16 +51,23 @@ footer {
   }
 }
 
-.google-calendar {
-  padding-top: 20px;
-
-
-}
-
 .calendar-date {
   display: inline-block;
   width: 100px;
   font-weight: bold;
   text-align: right;
   padding-right: 10px;
+}
+
+.carousel-caption {
+    width: 100%;
+    padding-top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-indicators {
+    bottom: 5px;
 }
