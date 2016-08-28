@@ -88,3 +88,11 @@ footer {
 #calendar .fc-left h2:before {
   content: 'Kalendár akcií - ';
 }
+
+.popover {
+  max-width: 400px;
+}
+
+.popover-title .time {
+  padding-top: 8px;
+}
