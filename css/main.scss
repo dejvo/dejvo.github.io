@@ -31,6 +31,7 @@ $on-laptop:        800px;
 header {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e5e5e5;
+  padding: 5px 0;
 }
 
 footer {
@@ -39,6 +40,8 @@ footer {
 }
 
 .navbar-default {
+  font-size: 18px;
+  padding-top: 26px;
   float: right;
 }
 
@@ -60,14 +63,28 @@ footer {
 }
 
 .carousel-caption {
-    width: 100%;
-    padding-top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  padding-top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .carousel-indicators {
-    bottom: 5px;
+  bottom: 5px;
+}
+
+#calendar {
+  padding-top: 18px;
+}
+
+#calendar .fc-left h2 {
+  font-size: 24px;
+  padding-top: 4px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#calendar .fc-left h2:before {
+  content: 'Kalendár akcií - ';
 }

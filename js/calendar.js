@@ -66,3 +66,19 @@ function appendPre(message) {
   // var textContent = document.createTextNode(message + '\n');
   pre.appendChild(message);
 }
+
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+        googleCalendarApiKey: API_KEY,
+        lang: 'sk',
+        events: {
+            googleCalendarId: CALENDAR_ID,
+        },
+        eventClick: function(calEvent, jsEvent, view) {
+          console.log(calEvent);
+          console.log(jsEvent);
+          console.log(view);
+          return false;
+        }
+    });
+});
