@@ -64,8 +64,9 @@ title: Úvod
     <ul>
       {% for post in site.posts %}
         <li>
+          <p><strong>{{ post.title }}</strong></p>
           <p>{{ post.excerpt }}</p>
-          <a href="{{ post.url }}">Zobraziť detaily</a>
+          {% if post.noDetails != true %}<a href="{{ post.url }}">Zobraziť detaily</a>{% endif %}
         </li>
       {% endfor %}
     </ul>
