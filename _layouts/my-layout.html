@@ -24,12 +24,13 @@ isHtmlSuffix: true
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="logo"><a href="/"><img src="{{site.url}}/img/jrf-logo-2.svg"/ height="100" title="{{ site.title }}"></a></div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <nav class="navbar-default">
               <ul class="nav navbar-nav">
+                <li class="{% if page.url == '/' %}active{% endif %}"><a href="/">Home</a></li>
                 <li class="{% if page.permalink == 'o-nas' %}active{% endif %}"><a href="/o-nas{% if layout.isHtmlSuffix %}.html{% endif %}">O nás</a></li>
                 <li class="{% if page.permalink == 'treningy' %}active{% endif %}"><a href="/treningy{% if layout.isHtmlSuffix %}.html{% endif %}">Tréningy</a></li>
                 <li class="{% if page.permalink == 'galeria' %}active{% endif %}"><a href="/galeria{% if layout.isHtmlSuffix %}.html{% endif %}">Galéria</a></li>

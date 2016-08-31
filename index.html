@@ -34,15 +34,15 @@ title: Úvod
       <img src="/img/vystupenia.jpg" alt="Vystúpenia">
       <div class="carousel-caption">
         <h3>Vystúpenia a tréningy</h3>
-        <p>Športové podujatia, festivaly, teambuildingy a ďalšie eventy</p>
+        <p>Športové podujatia, festivaly, teambuildingy a ďalšie eventy.</p>
       </div>
     </div>
 
     <div class="item">
-      <img src="/img/treningy-pre-deti.jpg" alt="Flower">
+      <img src="/img/nabor.jpg" alt="Nábor">
       <div class="carousel-caption">
-        <h3>Tréningy pre deti a mládež</h3>
-        <p>Vstávať a cvičiť.</p>
+        <h3>Nábor – školský rok 2016/2017</h3>
+        <p>JUMP ROPE FACTORY otvára krúžok jump ropu.</p>
       </div>
     </div>
   </div>
@@ -65,8 +65,10 @@ title: Úvod
       {% for post in site.posts %}
         <li>
           <p><strong>{{ post.title }}</strong></p>
-          <p>{{ post.excerpt }}</p>
-          {% if post.noDetails != true %}<a href="{{ post.url }}">Zobraziť detaily</a>{% endif %}
+          {{ post.excerpt }}
+          {% if post.noDetails != true %}
+            <p><a href="{{ post.url }}">Zobraziť detaily</a></p>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
