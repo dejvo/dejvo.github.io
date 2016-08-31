@@ -47,11 +47,14 @@ footer {
 
 .top-menu-item {
   display: inline-block;
-  /*color: red;*/
   padding: 10px;
   &:hover {
     color: #4078c0;
   }
+}
+
+.show-details {
+  margin-top: -10px;
 }
 
 .calendar-date {
@@ -93,6 +96,6 @@ footer {
   max-width: 400px;
 }
 
-.popover-title .time {
+.popover-title .title-row {
   padding-top: 8px;
 }

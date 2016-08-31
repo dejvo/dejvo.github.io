@@ -67,7 +67,7 @@ title: Úvod
           <p><strong>{{ post.title }}</strong></p>
           {{ post.excerpt }}
           {% if post.noDetails != true %}
-            <p><a href="{{ post.url }}">Zobraziť detaily</a></p>
+            <p class="show-details"><a href="{{ post.url }}">Zobraziť detaily</a></p>
           {% endif %}
         </li>
       {% endfor %}

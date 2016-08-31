@@ -15,8 +15,11 @@ $(document).ready(function() {
         },
         eventAfterRender: function(calEvent, element) {
           var title = '<strong>' + calEvent.title + '</strong>';
+          if (calEvent.location) {
+            title += '<div class="title-row">' + calEvent.location + '</div>';
+          }
           if (!calEvent.allDay) {
-            title += '<div class="time">' + calEvent.start.format('LT') + ' -  ' + calEvent.end.format('LT') + '</div>';
+            title += '<div>' + calEvent.start.format('LT') + ' -  ' + calEvent.end.format('LT') + '</div>';
           }
           $(element).popover({
             title: title,
