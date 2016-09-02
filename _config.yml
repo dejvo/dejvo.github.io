@@ -26,7 +26,7 @@ url: "http://jumpropefactory.sk" # the base hostname & protocol for your site
 url_onas: "o-nas"
 url_treningy: "treningy"
 url_galeria: "galeria"
-url_kontakty: "kontakt"
+url_kontakt: "kontakt"
 twitter_username: jekyllrb
 github_username:  jekyll
 excerpt_separator: <!--more-->
