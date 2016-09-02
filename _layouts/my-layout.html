@@ -1,5 +1,5 @@
 ---
-isHtmlSuffix: true
+
 ---
 <!doctype html>
 <html lang="en">
@@ -31,10 +31,10 @@ isHtmlSuffix: true
             <nav class="navbar-default">
               <ul class="nav navbar-nav">
                 <li class="{% if page.url == '/' %}active{% endif %}"><a href="/">Home</a></li>
-                <li class="{% if page.permalink == 'o-nas' %}active{% endif %}"><a href="/o-nas{% if layout.isHtmlSuffix %}.html{% endif %}">O nás</a></li>
-                <li class="{% if page.permalink == 'treningy' %}active{% endif %}"><a href="/treningy{% if layout.isHtmlSuffix %}.html{% endif %}">Tréningy</a></li>
-                <li class="{% if page.permalink == 'galeria' %}active{% endif %}"><a href="/galeria{% if layout.isHtmlSuffix %}.html{% endif %}">Galéria</a></li>
-                <li class="{% if page.permalink == 'kontakt' %}active{% endif %}"><a href="/kontakt{% if layout.isHtmlSuffix %}.html{% endif %}">Kontakt</a></li>
+                <li class="{% if page.permalink == site.url_onas %}active{% endif %}"><a href="{{ site.url_onas }}">O nás</a></li>
+                <li class="{% if page.permalink == site.url_treningy %}active{% endif %}"><a href="{{ site.url_treningy }}">Tréningy</a></li>
+                <li class="{% if page.permalink == site.url_galeria %}active{% endif %}"><a href="{{ site.url_galeria }}">Galéria</a></li>
+                <li class="{% if page.permalink == site.url_kontakt %}active{% endif %}"><a href="{{ site.url_kontakt }}">Kontakt</a></li>
               </ul>
             </nav>
           </div>
