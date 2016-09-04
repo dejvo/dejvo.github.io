@@ -5,6 +5,7 @@ $(document).ready(function() {
     $('#calendar').fullCalendar({
         googleCalendarApiKey: API_KEY,
         lang: 'sk',
+        fixedWeekCount: false,
         events: {
             googleCalendarId: CALENDAR_ID,
         },
