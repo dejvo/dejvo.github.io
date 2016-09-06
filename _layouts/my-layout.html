@@ -25,7 +25,14 @@
               <ul class="nav navbar-nav">
                 <li class="{% if page.url == '/' %}active{% endif %}"><a href="/">Home</a></li>
                 <li class="{% if page.permalink == site.url_onas %}active{% endif %}"><a href="{{ site.url_onas }}">O nás</a></li>
-                <li class="{% if page.permalink == site.url_treningy %}active{% endif %}"><a href="{{ site.url_treningy }}">Tréningy</a></li>
+                <li class="dropdown {% if page.permalink == site.url_treningy_pre_deti or page.permalink == site.url_treningy_pre_dospelych or page.permalink == site.url_treningy_pre_ucitelov %}active{% endif %}">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tréningy <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ site.url_treningy_pre_deti }}">Tréningy pre deti</a></li>
+                    <li><a href="{{ site.url_treningy_pre_dospelych }}">Tréningy pre dospelých</a></li>
+                    <li><a href="{{ site.url_treningy_pre_ucitelov }}">Workshopy</a></li>
+                  </ul>
+                </li>
                 <li class="{% if page.permalink == site.url_galeria %}active{% endif %}"><a href="{{ site.url_galeria }}">Galéria</a></li>
                 <li class="{% if page.permalink == site.url_kontakt %}active{% endif %}"><a href="{{ site.url_kontakt }}">Kontakt</a></li>
               </ul>
