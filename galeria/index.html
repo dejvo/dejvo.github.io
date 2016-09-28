@@ -1,0 +1,22 @@
+---
+layout: my-layout
+title: Galéria
+<!-- permalink: galeria -->
+published: true
+---
+
+<h2>Galéria</h2>
+
+{% for album in site.data.albums %}
+  <div class="album-container">
+    <a href="/galeria/{{ album.url }}">
+      <div class="grow pic">
+        <img src="/img/{{ album.url }}.jpg" alt="{{ album.name }}">
+      </div>
+      <div class="album-caption">
+        <h4>{{ album.name }}</h4>
+      </div>
+    </a>
+  </div>
+{% endfor %}
+

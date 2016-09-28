@@ -108,3 +108,48 @@ img.contacts-icon {
   vertical-align: text-top;
   width: 15px;
 }
+
+.pic {
+  box-sizing: border-box;
+  height: 225px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.grow img {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 225px;
+  width: 300px;
+  transition: all 1s ease;
+}
+ 
+.grow img:hover {
+  position: relative;
+  top: -37.5px;
+  left: -50px;
+  height: 300px;
+  width: 400px;
+}
+
+.album-container {
+  position: relative;
+  display: inline-block;
+  box-shadow: 3px 3px 3px #333;
+  margin: 0 20px 20px 0;
+}
+
+.album-container:hover a {
+  color: white;
+}
+
+.album-caption {
+  position: absolute;
+  width: 100%;
+  padding: 0 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
