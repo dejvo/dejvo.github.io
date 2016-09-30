@@ -62,8 +62,9 @@ def get_credentials():
 def create_content(items):
     content = ''
     for item in items:
-        img_url = re.sub(r'(export=)download', r'\1view', item['webContentLink'])
-        content += '<a href="{0}">\n  <img src="{1}" />\n</a>\n'.format(img_url, item['thumbnailLink'])
+        # img_url = re.sub(r'(export=)download', r'\1view', item['webViewLink'])
+        img_thumbnail = 'https://drive.google.com/thumbnail?authuser=0&sz=h320&id=' + item['id']
+        content += '<a href="{0}">\n  <img src="{1}" />\n</a>\n'.format(item['webViewLink'], img_thumbnail)
     return content
 
 def append_to_file(filename, items):
@@ -93,9 +94,9 @@ def process_albums(config):
             continue
         results = service.files().list(
                 q='"{0}" in parents'.format(item['id']),
-                fields='files(thumbnailLink, webContentLink)'
+                fields='files(id, webViewLink)'
             ).execute()
-        # pprint.pprint(results)
+        pprint.pprint(results)
         items = results.get('files', [])
         if not items:
             print('No files found.')
