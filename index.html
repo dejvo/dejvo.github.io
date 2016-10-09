@@ -65,10 +65,16 @@ title: Úvod
       {% for post in site.posts %}
         <li>
           <p><strong>{{ post.title }}</strong></p>
+          {% if post.img %}
+          <div class="post-img">
+            <img src="/img/{{ post.img }}" title="{{ post.title }}" alt="{{ post.title }}" width="200"/>
+          </div>
+          {% endif %}
           {{ post.excerpt }}
-          {% if post.noDetails != true %}
+          {% if post.showDetails == true %}
             <p class="show-details"><a href="{{ post.url }}">Zobraziť detaily</a></p>
           {% endif %}
+          <div class="cleaner"></div>
         </li>
       {% endfor %}
     </ul>
