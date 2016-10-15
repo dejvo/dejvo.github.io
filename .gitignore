@@ -1,6 +1,5 @@
 _site
 .sass-cache
 .jekyll-metadata
-bower_components
 client_secret.json
 py3env

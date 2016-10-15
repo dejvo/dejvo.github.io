@@ -26,7 +26,18 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+.table {
+  display: table;
+}
 
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
 
 header {
   background-color: #f8f8f8;
@@ -58,7 +69,8 @@ footer {
 }
 
 .post-img {
-  float: left;
+  /*float: left;*/
+  display: table-cell;
   padding: 0 10px 0 0;
 }
 
@@ -92,13 +104,17 @@ footer {
 }
 
 #calendar .fc-left h2 {
-  font-size: 24px;
+  font-size: 30px;
   padding-top: 4px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #calendar .fc-left h2:before {
   content: 'Kalendár akcií - ';
+}
+
+#calendar .fc-toolbar .fc-right {
+  padding-top: 5px;
 }
 
 .popover {
