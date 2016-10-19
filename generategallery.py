@@ -64,7 +64,7 @@ def create_content(items):
     for item in items:
         # img_url = re.sub(r'(export=)download', r'\1view', item['webViewLink'])
         img_thumbnail = 'https://drive.google.com/thumbnail?authuser=0&sz=h320&id=' + item['id']
-        content += '<a href="{0}">\n  <img src="{1}" />\n</a>\n'.format(item['webViewLink'], img_thumbnail)
+        content += '<a href="{0}" data-lightbox="my-gallery">\n  <img src="{1}" />\n</a>\n'.format(item['webContentLink'], img_thumbnail)
     return content
 
 def append_to_file(filename, items):
@@ -94,7 +94,7 @@ def process_albums(config):
             continue
         results = service.files().list(
                 q='"{0}" in parents'.format(item['id']),
-                fields='files(id, webViewLink)'
+                fields='files(id, webContentLink)'
             ).execute()
         pprint.pprint(results)
         items = results.get('files', [])
