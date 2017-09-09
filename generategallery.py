@@ -60,11 +60,12 @@ def get_credentials():
     return credentials
 
 def create_content(items):
-    content = ''
+    content = '<div class="gallery">\n'
     for item in items:
         # img_url = re.sub(r'(export=)download', r'\1view', item['webViewLink'])
         img_thumbnail = 'https://drive.google.com/thumbnail?authuser=0&sz=h320&id=' + item['id']
         content += '<a href="{0}" data-lightbox="my-gallery">\n  <img src="{1}" />\n</a>\n'.format(item['webContentLink'], img_thumbnail)
+    content += '</div>\n'
     return content
 
 def append_to_file(filename, items):

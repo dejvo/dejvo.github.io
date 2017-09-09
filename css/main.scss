@@ -179,3 +179,11 @@ img.contacts-icon {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.gallery img {
+  vertical-align: baseline;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  box-shadow: 3px 3px 3px #333;
+  background-color: #333;
+}
