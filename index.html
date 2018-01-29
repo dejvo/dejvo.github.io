@@ -10,11 +10,20 @@ title: Úvod
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
+      <img src="/img/2-percenta.jpg" alt="2 percentá z dane">
+      <div class="carousel-caption">
+        <h3><a href="{% post_url 2018-01-29-dan %}">Venuj svoje 2 % OZ JUMP ROPE FACTORY</a></h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="item">
       <img src="/img/nabor-2017.jpg" alt="Nábor">
       <div class="carousel-caption">
         <h3><a href="{% post_url 2017-09-05-nabor %}">Nábor – školský rok 2017/2018</a></h3>
@@ -63,28 +72,30 @@ title: Úvod
     <h2>Aktuálne</h2>
     <div>
       {% for post in site.posts %}
-        <div>
-          <div class="table">
-            <div class="table-row">
-              <span class="table-cell">{{ post.date | date: "%e. %m. %Y" }}</span>
-              <strong class="table-cell" style="padding-bottom: 10px;">{{ post.title }}</strong>
-            </div>
-            <div class="table-row">
-              {% if post.imgThumb %}
-              <div class="post-img">
-                <a href="/img/{{ post.img }}" data-lightbox="{{ post.img }}"><img src="/img/{{ post.imgThumb }}" title="{{ post.title }}" alt="{{ post.title }}" width="200"/></a>
+        {% if post.hideInNews != true %}
+          <div>
+            <div class="table">
+              <div class="table-row">
+                <span class="table-cell">{{ post.date | date: "%e. %m. %Y" }}</span>
+                <strong class="table-cell" style="padding-bottom: 10px;">{{ post.title }}</strong>
               </div>
-              {% endif %}
-              <div class="table-cell">
-              {{ post.excerpt }}
-              {% if post.showDetails == true %}
-                <p class="show-details"><a href="{{ post.url }}">Zobraziť detaily</a></p>
-              {% endif %}
+              <div class="table-row">
+                {% if post.imgThumb %}
+                <div class="post-img">
+                  <a href="/img/{{ post.img }}" data-lightbox="{{ post.img }}"><img src="/img/{{ post.imgThumb }}" title="{{ post.title }}" alt="{{ post.title }}" width="200"/></a>
+                </div>
+                {% endif %}
+                <div class="table-cell">
+                {{ post.excerpt }}
+                {% if post.showDetails == true %}
+                  <p class="show-details"><a href="{{ post.url }}">Zobraziť detaily</a></p>
+                {% endif %}
+                </div>
               </div>
             </div>
+            <hr>
           </div>
-          <hr>
-        </div>
+        {% endif %}        
       {% endfor %}
     </div>
   </div>
