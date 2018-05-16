@@ -30,7 +30,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 excerpt_separator: <!--more-->
 paginate: 5
-gems:
+plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
