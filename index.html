@@ -71,7 +71,7 @@ title: Úvod
   <div class="col-md-6 col-xs12">
     <h2>Aktuálne</h2>
     <div>
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
         {% if post.hideInNews != true %}
           <div>
             <div class="table">
@@ -98,16 +98,28 @@ title: Úvod
         {% endif %}        
       {% endfor %}
     </div>
+
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">Predošlá</a>
+      {% endif %}
+      <span>{{ paginator.page }} z {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Ďalšia</a>
+      {% endif %}
+    </div>
+
   </div>
   <div class="col-md-6 col-xs12 google-calendar">
     <div id="calendar"></div>
   </div>
 
 </div>
-<script src="js/calendar.js"></script>
+<script src="/js/calendar.js"></script>
 <script src="https://apis.google.com/js/client.js"></script>
-<script src="bower_components/moment/min/moment.min.js"></script>
-<script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-<script src="bower_components/fullcalendar/dist/gcal.js"></script>
-<script src="bower_components/fullcalendar/dist/lang/sk.js"></script>
-<link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css" type="text/css" />
+<script src="/bower_components/moment/min/moment.min.js"></script>
+<script src="/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="/bower_components/fullcalendar/dist/gcal.js"></script>
+<script src="/bower_components/fullcalendar/dist/lang/sk.js"></script>
+<link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.min.css" type="text/css" />

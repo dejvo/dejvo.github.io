@@ -29,8 +29,10 @@ url_kontakt: "kontakt"
 twitter_username: jekyllrb
 github_username:  jekyll
 excerpt_separator: <!--more-->
+paginate: 5
 gems:
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
