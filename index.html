@@ -10,20 +10,12 @@ title: Úvod
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
-    <li data-target="#myCarousel" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="/img/2-percenta.jpg" alt="2 percentá z dane">
-      <div class="carousel-caption">
-        <h3><a href="{% post_url 2018-01-29-dan %}">Venuj svoje 2 % OZ JUMP ROPE FACTORY</a></h3>
-        <p></p>
-      </div>
-    </div>
 
-    <div class="item">
+    <div class="item active">
       <img src="/img/nabor-2017.jpg" alt="Nábor">
       <div class="carousel-caption">
         <h3><a href="{% post_url 2017-09-05-nabor %}">Nábor – školský rok 2017/2018</a></h3>
@@ -102,11 +94,11 @@ title: Úvod
     <!-- Pagination links -->
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">Predošlá</a>
+        <a href="{{ paginator.previous_page_path }}">Novšie</a>
       {% endif %}
       <span>{{ paginator.page }} z {{ paginator.total_pages }}</span>
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">Ďalšia</a>
+        <a href="{{ paginator.next_page_path }}">Staršie</a>
       {% endif %}
     </div>
 
